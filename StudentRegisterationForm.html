@@ -1,0 +1,292 @@
+<!DOCTYPE html>  
+<html>  
+<head>  
+<meta name="viewport" content="width=device-width, initial-scale=1">  
+<style>  
+body{  
+  font-family: Calibri, Helvetica, sans-serif;  
+  background-color: pink;  
+}  
+.container {  
+    padding: 50px;  
+  background-color: lightblue;  
+}  
+  
+input[type=text], input[type=password], textarea {  
+  width: 100%;  
+  padding: 15px;  
+  margin: 5px 0 22px 0;  
+  display: inline-block;  
+  border: none;  
+  background: #f1f1f1;  
+}  
+input[type=text]:focus, input[type=password]:focus {  
+  background-color: orange;  
+  outline: none;  
+}  
+ div {  
+            padding: 10px 0;  
+         }  
+hr {  
+  border: 1px solid #f1f1f1;  
+  margin-bottom: 25px;  
+}  
+.registerbtn {  
+  background-color: #4CAF50;  
+  color: white;  
+  padding: 16px 20px;  
+  margin: 8px 0;  
+  border: none;  
+  cursor: pointer;  
+  width: 100%;  
+  opacity: 0.9;  
+}  
+.registerbtn:hover {  
+  opacity: 1;  
+}
+
+.resetbtn {  
+  background-color: #4CAF50;  
+  color: white;  
+  padding: 16px 20px;  
+  margin: 8px 0;  
+  border: none;  
+  cursor: pointer;  
+  width: 100%;  
+  opacity: 0.9;  
+}  
+.resetbtn:hover {  
+  opacity: 1;  
+}   
+</style>  
+</head>  
+<body>  
+<form action="StudentServlet" method="post">  
+ <input type="hidden" name="option" value="insertData">
+ 
+  <div class="container">  
+  <center>  <h1> Student Registeration Form</h1> </center>  
+  <hr>  
+  
+<label> Firstname </label>   
+<input type="text" name="firstname" placeholder= "Firstname" size="15" required />   
+<label> Lastname: </label>    
+<input type="text" name="lastname" placeholder="Lastname" size="15"required />  
+<label> Surname: </label>   
+<input type="text" name="surname" placeholder="surname" size="15" required /> 
+<label> Cnic : </label>   
+<input type="text" name="cnic" placeholder="cnic" size="15" required /> 
+<label> Contact Number : </label>   
+<input type="text" name="contactNo" placeholder="contactNo" size="15" required /> 
+ 
+<div> 
+<label>Profile Pic</label><br>
+ <label for="img">Select image:</label>
+  <input type="file" id="img" name="img" accept="image/*">
+  <!-- <input type="submit">--->
+</div>
+<div>
+<div>
+ <label for="birthday">Date of Birth:</label>
+  <input type="date" id="birthday" name="birthday">
+</div>
+
+
+<label>   
+Gender :  
+</label><br>  
+<input type="radio" value="Male" name="gender"> Male   
+<input type="radio" value="Female" name="gender"> Female   
+<input type="radio" value="Other" name="gender"> Other  
+  
+</div>  
+
+
+
+<div>
+<label>   
+Select the Country :  
+</label>    
+<select id="countryDropdown1" name="countryName"> 
+<option value="Pakistan">Pakistan</option>  
+<option value="China">China</option>  
+<option value="America">America</option>  
+<option value="England">England</option>  
+<option value="Landon">London</option>  
+<option value="Italy">Italy</option>  
+<option value="Turkey">Turkey</option> 
+<option value="India">India</option>  
+<option value="Indonesia">Indonesia</option>  
+<option value="Germany">Germany</option>  
+<option value="Nigeria">Nigeria</option>  
+<option value="Brazil">Brazil</option>  
+<option value="Russia">Russia</option>  
+<option value="Japan">Japan</option>   
+</select>  
+</div> 
+<div> 
+<label>   
+Select Your Province :  
+</label>
+<select id="mydropdown2" name="provinceName"> 
+<option value="Sindh">Sindh</option>  
+<option value="Balochistan">Balochistan</option>  
+<option value="kpk">KhyberPakhtonKhawa</option>  
+<option value="Punjab">Punjab</option>  
+<option value="Gilgit">GilgitBaltistan</option>  
+<option value="AzadKashmir">AzadKashmir</option>  
+
+</select>  
+
+</div>
+
+<div>
+<label>Select Your City in  Sindh</label>
+<select id="mydropdown2" name="citieOfsindh"> 
+<option value="Karachi">Karachi</option>  
+<option value="Hyderabad">Hyderabad</option>  
+<option value="Sukkar">Sukkar</option>  
+<option value="Larkana">Larkana</option>  
+<option value="Benazirabad">Benazirabad</option>  
+<option value="Khairpur">Khairpur</option>  
+<option value="Shikarpur">Shikarpur</option>
+<option value="TandoAdamKhan">TandoAdamKhan</option>  
+<option value="TandoAllahyar">TandoAllahyar</option>  
+<option value="Bolhari">Bolhari</option>  
+<option value="Umerkot">Umerkot/option>  
+<option value="Moro">Moro</option>  
+<option value="Shahdadkot">Shahdadkot</option>  
+<option value="Ghotki">Ghotki</option>
+</select>  
+</div>
+<div>
+<label>Select Your City in Punjab</label>
+<select id="myDropdown3" name="citiesOfpunjab"> 
+<option value="Lahore">Lahore</option>  
+<option value="Faisalabad">Faisalabad</option>  
+<option value="Rawalpindi">Rawalpindi</option>  
+<option value="Gujranwala">Gujranwala</option>  
+<option value="Multan">Multan</option>  
+<option value="Sargodha">Sargodha</option>  
+<option value="Sialkot">Sialkot</option>
+<option value="Bahawalpur">Bahawalpur</option>  
+<option value="GujarKhan">GujarKhan</option>  
+<option value="Rajanpur">Rajanpur</option>  
+<option value="Haroonabad">Haroonabad</option>  
+<option value="Sahiwal">Sahiwal</option>  
+<option value="Okara">Okara</option>  
+<option value="RahimYarKhan">RahimYarKhan</option>
+</select>  
+</div>
+
+<div>
+<label>Select Your City in  Balochistan </label>
+<select id="myDropdown3" name="citiesOfbalochistan"> 
+<option value="Quetta">Quetta</option>  
+<option value="Turbat">Turbat</option>  
+<option value="Khuzdar">Khuzdar</option>  
+<option value="Hub">Hub</option>  
+<option value="Chaman">Chaman</option>  
+<option value="Pishin">Pishin</option>  
+<option value="Dera Murad Jamali">Dera Murad Jamali</option>
+<option value="Dera Allah Yar">Dera Allah Yar</option>  
+<option value="Kharan">Kharan</option>  
+<option value="SuiTown">Sui Town</option>  
+<option value="Zehri">Zehri</option>  
+<option value="Gwadar">Gwadar</option>  
+<option value="Sibi">Sibi</option>  
+<option value="Buleda">Buleda</option>
+</select>  
+</div>
+<div>
+<label>Select Your City in Khyber PakhtaonKhwa</label>
+<select id="myDropdown4" name="citiesOfkpk"> 
+<option value="Peshawar">Peshawar</option>  
+<option value="Mardan">Mardan</option>  
+<option value="Mingora">Mingora</option>  
+<option value="Kohat">Kohat</option>  
+<option value="Abbottabad">Abbottabad</option>  
+<option value="Mansehra">Mansehra</option>  
+<option value="DeraIsmailKhan">DeraIsmailKhan</option>
+<option value="Swabi">Swabi</option>  
+<option value="Nowshera">Nowshera</option>  
+<option value="Kabal">Kabal</option>  
+<option value="Charsadda">Charsadda</option>  
+<option value="Barikot">Barikot</option>  
+<option value="Shabqadar">Shabqadar</option>  
+<option value="Haripur">Haripur</option>
+</select>  
+</div>
+<div>
+<label>Select Your City in GilgitBaltistan </label>
+<select id="myDropdown5" name="citiesOfgilgit"> 
+<option value="Kharmang">Kharmang</option>  
+<option value="Skardu">Skardu</option>  
+<option value="Shigar">Shigar</option>  
+<option value="Ghanche">Ghanche</option>  
+<option value="Roundu">Roundu</option>  
+<option value="Gilgit">Gilgit</option>  
+<option value="Ghizer">Ghizer</option>
+<option value="Hunza">Hunza</option>  
+<option value="Nagar">Nagar</option>  
+<option value="GupisYasin">GupisYasin</option>  
+
+</select>  
+</div>
+<div>
+<label>Select Your City in  Azad Kashmir</label>
+<select id="myDropdown6" name="citiesOfazadkashmir"> 
+<option value="Hattian Bala">Hattian Bala</option>  
+<option value="Neelam Valley">Neelam Valley</option>  
+<option value="Mirpur">Mirpur</option>  
+<option value="Bhimber">Bhimber</option>  
+<option value="Kotli">Kotli</option>  
+<option value="Bagh">Bagh</option>  
+<option value="Haveli">Haveli</option>
+<option value="Sudhanoti">Sudhanoti</option>  
+</select>  
+</div>
+
+
+
+ <div>  
+<label>   
+Select Your Hobies :  
+</label><br>
+<input type="checkbox" id="hoby1" name="hobyName" value="Reading">
+<label for="hoby1">Reading</label><br>
+<input type="checkbox" id="hoby2" name="hobyName" value="Music">
+<label for="hoby2">Music</label><br>
+<input type="checkbox" id="hoby3" name="hobyName" value="Writing">
+<label for="hoby3">Writing</label><br>
+<input type="checkbox" id="hoby4" name="hobyName" value="Drawing">
+<label for="hoby4">Drawing</label><br>
+<input type="checkbox" id="hoby5" name="hobyName" value="gym">
+<label for="hoby5">gym</label><br>
+<input type="checkbox" id="hoby6" name="hobyName" value="walking">
+<label for="hoby6">walking</label><br>
+</div>
+
+
+
+
+Current Address :  
+<textarea cols="80" rows="5" placeholder="Current Address" name="address" value="address" required>  
+</textarea>  
+ <label for="email"><b>Email</b></label>  
+ <input type="text" placeholder="Enter Email" name="email" required>  
+  
+    <label for="psw"><b>Password</b></label>  
+    <input type="password" placeholder="Enter Password" name="psw" required>  
+  
+    <label for="psw-repeat"><b>Re-type Password</b></label>  
+    <input type="password" placeholder="Retype Password" name="psw-repeat" required>  
+    <button type="submit" class="registerbtn" value="submit">Register</button>
+    <br><br>
+    <button type="reset" class="resetbtn" value="reset">Resset</button>
+    
+    
+</form> 
+
+</body>  
+</html>  
